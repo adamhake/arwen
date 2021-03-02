@@ -8,19 +8,19 @@ Gem::Specification.new do |spec|
   spec.name          = "arwen"
   spec.version       = Arwen::VERSION
   spec.authors       = ["Adam Hake"]
-  spec.email         = ["adamhake@gmail.com"]
+  spec.email         = ["adamhake@hey.com"]
 
   spec.summary       = "Parses a sitemap recursively using typheous"
-  spec.description   = "Sitemap Parser recursively parses a sitemap leveraging typheous concurrent https request"
+  # rubocop:disable Metrics/LineLength
+  spec.description   = "Arwen is a basic sitemap parser that auto detects sitemapindex and uses Typheous::Hydra for parallel requests"
+  # rubocop:enable Metrics/LineLength
   spec.homepage      = "https://github.com/adamhake/arwen"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.5.0")
 
-  # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
-
   spec.metadata["homepage_uri"] = spec.homepage
-  # spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/adamhake/arwen"
+  spec.metadata["changelog_uri"] = "https://github.com/adamhake/arwen/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -31,11 +31,6 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
   spec.add_dependency "ox", "~> 2.14"
   spec.add_dependency "typhoeus", "~> 1.4"
-
-  # For more information and examples about making a new gem, checkout our
-  # guide at: https://bundler.io/guides/creating_gem.html
 end
