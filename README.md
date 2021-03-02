@@ -3,6 +3,7 @@
 Arwen parses sitemaps that adhere to the sitemaps.org protocol.  Inspired by benbalter's [sitemap-parser gem](https://github.com/benbalter/sitemap-parser), arwen automatically detects if recursion is needed by analyzing the presence of `<sitemapindex>`. It also leverages Typheous' parallel request functionality via `Typheous::Hydra` when needed to drastically speed up
 fetching large sitemaps.
 
+Documentation: [https://rubydoc.info/gems/arwen](https://rubydoc.info/gems/arwen)
 ## Installation
 
 Add this line to your application's Gemfile:
